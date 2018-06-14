@@ -92,7 +92,11 @@ class JSend
         $this->checkResponse();
 
         if ($this->getStatus() !== self::ERROR) {
-            throw new JSendException('Code can only be set when an error message is created');
+            throw new JSendException('Code can only be set when an error response is created');
+        }
+
+        if (!is_numeric($code)) {
+            throw new JSendException('Code must be numeric');
         }
 
         $this->response['code'] = $code;

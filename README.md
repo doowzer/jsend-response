@@ -13,9 +13,9 @@ $jsend->success();
 $jsend = new JSend();
 $jsend->fail("Invalid username");
 
-// Error whith optional code
+// Error with optional code
 $jsend = new JSend();
-$jsend->error("Can't connect to database")->addCode(10);
+$jsend->error("Unable to communicate with database")->addCode(10);
 
 // Transform Exception
 $jsend = new JSend();

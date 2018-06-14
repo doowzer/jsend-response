@@ -4,6 +4,9 @@ namespace Tests;
 
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @SuppressWarnings(PHPMD.TooManyPublicMethods)
+ */
 class JSendTest extends TestCase
 {
     /** @var \JSend\JSend $jsend */
@@ -111,7 +114,16 @@ class JSendTest extends TestCase
 
     /**
      * @expectedException \JSend\JSendException
-     * @expectedExceptionMessage Code can only be set when an error message is created
+     * @expectedExceptionMessage Code must be numeric
+     */
+    public function testSetCodeNoneNumeric()
+    {
+        $this->jsend->error('Mock message')->setCode('A');
+    }
+
+    /**
+     * @expectedException \JSend\JSendException
+     * @expectedExceptionMessage Code can only be set when an error response is created
      */
     public function testSetCodeInvalidMessage()
     {
