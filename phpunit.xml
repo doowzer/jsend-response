@@ -1,0 +1,20 @@
+<phpunit>
+    <testsuites>
+        <testsuite name="JSend Unit">
+            <directory>./tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./src</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log
+            type="coverage-html"
+            target="./tests/coverage-report"
+            lowUpperBound="50"
+            highLowerBound="80"
+        />
+    </logging>
+</phpunit>
