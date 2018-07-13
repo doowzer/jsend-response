@@ -1,6 +1,6 @@
 # jsend-response
 
-Implementation of the [JSend](https://labs.omniti.com/labs/jsend) JSON response.
+Implementation of the [JSend](https://labs.omniti.com/labs/jsend) standard JSON response.
 
 ## Usage
 
