@@ -141,7 +141,7 @@ class JSend
     public function __toString()
     {
         if (empty($this->response)) {
-            return json_encode(['status' => self::ERROR, 'data' => null]);
+            return json_encode(['status' => self::ERROR, 'data' => 'Empty response']);
         }
 
         return json_encode($this->response);

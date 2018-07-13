@@ -96,6 +96,12 @@ class JSendTest extends TestCase
         $this->assertEquals('{"status":"success","data":null}', $result);
     }
 
+    public function testToStringError()
+    {
+        $result = (string) $this->jsend;
+        $this->assertEquals('{"status":"error","data":"Empty response"}', $result);
+    }
+
     /**
      * @expectedException \JSend\JSendException
      * @expectedExceptionMessage parameter must be an instance of \Throwable
